@@ -1,16 +1,21 @@
-# Things you should be able to do.
-
+# Things you should be able to do
+some_list = [1, 2, 3, 4, 5, 6]
 # Write a function that takes a list and returns a new list with only the odd numbers.
 def all_odd(some_list):
     odds = []
     for items in some_list:
-        if items % 2 != 0:
+        if items % 2 == 1:
             odds.append(items)
     return odds
-
+print all_odd(some_list)
 # Write a function that takes a list and returns a new list with only the even numbers.
 def all_even(some_list):
-    return []
+    evens = []
+    for items in some_list:
+        if items % 2 == 0:
+            evens.append(items)
+    return evens
+print all_even(some_list)
 
 # Write a function that takes a list of strings and a new list with all strings of length 4 or greater.
 def long_words(word_list):
