@@ -1,5 +1,5 @@
 # Things you should be able to do
-some_list = [1, 2, 3, 4, 5, 6]
+some_list = [100, 20, 33, 4, 52, 60, 201, 20]
 # Write a function that takes a list and returns a new list with only the odd numbers.
 def all_odd(some_list):
     odds = []
@@ -7,7 +7,7 @@ def all_odd(some_list):
         if items % 2 == 1:
             odds.append(items)
     return odds
-print all_odd(some_list)
+#print all_odd(some_list)
 # Write a function that takes a list and returns a new list with only the even numbers.
 def all_even(some_list):
     evens = []
@@ -15,23 +15,43 @@ def all_even(some_list):
         if items % 2 == 0:
             evens.append(items)
     return evens
-print all_even(some_list)
+#print all_even(some_list)
 
-# Write a function that takes a list of strings and a new list with all strings of length 4 or greater.
+# Write a function that takes a list of strings and returns a new list with all strings of length 4 or greater.
+word_list = ["hi" , "hello" , "lol", "hola" , "conichiwa"]
 def long_words(word_list):
-    return []
+    longs = []
+    for items in word_list:
+        if len(items) >= 4:
+            longs.append(items)
+    return longs
+#print long_words(word_list)
 
 # Write a function that finds the smallest element in a list of integers and returns it.
 def smallest(some_list):
-    return None
+    first = some_list[0]
+    for items in some_list:
+        if items < first:
+            first = items
+    return first
+#print smallest(some_list)
 
 # Write a function that finds the largest element in a list of integers and returns it.
 def largest(some_list):
-    return None
+    first = some_list[0]
+    for items in some_list:
+        if items > first:
+            first = items
+    return first
+#print largest(some_list)
 
 # Write a function that takes a list of numbers and returns a new list of all those numbers divided by two.
 def halvesies(some_list):
-    return []
+    halves = []
+    for items in some_list:
+        halves.append(items/float(2))
+    return halves
+print halvesies(some_list)
 
 # Write a function that takes a list of words and returns a list of all the lengths of those words.
 def word_lengths(word_list):
